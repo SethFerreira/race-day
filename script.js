@@ -1,17 +1,17 @@
 let raceNumber = Math.floor(Math.random() * 1000);
+// Boolean values and age input affect behavior
+const registeredEarly = false;
+const runnerAge = 19;
 
-const registeredEarly = true;
-const runnerAge = 18;
-
-if (runnerAge > 18 && registeredEarly === false) {
+if (runnerAge > 18 && registeredEarly === true) {
     raceNumber += 1000;
 }
 if (runnerAge > 18 && registeredEarly === true) {
-    console.log(`Runner #${raceNumber} 9:30am`);
+    console.log(`Adult and registered early: #${raceNumber} 9:30am`);
 } else if (runnerAge > 18 && registeredEarly === false) {
-    console.log(`Runner #${raceNumber} 11:00am`);
+    console.log(`Adult and registered late: #${raceNumber} 11:00am`);
 } else if (runnerAge < 18) {
-    console.log(`Runner #${raceNumber} 12:30pm`);
+    console.log(`Youth: #${raceNumber} 12:30pm`);
 } else {
     console.log('See registration desk');
 }
